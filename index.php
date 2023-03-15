@@ -2,7 +2,7 @@
   include_once('init.php');
   $rows = $db->query('SELECT * FROM book ORDER BY title');
     foreach ($rows as $row) {
-        echo '<pre>' . var_dump($row) . '</pre>';
+        echo '<pre>' . print_r($row) . '</pre>';
     }
 ?>
 <!doctype html>
@@ -31,32 +31,35 @@
       <table class="table table-striped table-responsive-lg">
       <thead>
         <tr>
+          <th scope="col">ID</th>
+          <th scope="col">ISBN</th>
           <th scope="col">Title</th>
           <th scope="col">Author</th>
-          <th scope="col">Pages</th>
-          <th scope="col">ISBN</th>
-          <th scope="col">Available</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Price</th>
           
         </tr>
       </thead>
       <tbody>
         <?php 
-          
+          echo 
         ?>
         <tr>
-          <th scope="row">To Kill A Mockingbird</th>
-          <td>Harper Lee</td>
-          <td>336</td>
+          <th scope="row">1</th>
           <td>9780061120084</td>
-          <td>Yes</td>
+          <td>To Kill A Mockingbird</td>
+          <td>Harper Lee</td>
+          <td>2</td>
+          <td>10</td>
         </tr>
 
         <tr>
-          <th scope="row">To Kill A Mockingbird</th>
-          <td>Harper Lee</td>
-          <td>336</td>
+          <th scope="row">1</th>
           <td>9780061120084</td>
-          <td>Yes</td>
+          <td>To Kill A Mockingbird</td>
+          <td>Harper Lee</td>
+          <td>2</td>
+          <td>10</td>
         </tr>
 
       </tbody>
